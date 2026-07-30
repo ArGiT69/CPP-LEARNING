@@ -1,1 +1,17 @@
-/testing.exe
+# Ignore executable files
+*.exe
+
+# Ignore object files
+*.o
+*.obj
+
+# Ignore debug files
+*.pdb
+
+# Ignore VS Code C++ build output (optional)
+bin/
+build/
+out/
+
+# Ignore temporary files
+*.tmp
