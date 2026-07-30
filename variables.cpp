@@ -27,6 +27,8 @@ int main()
     std::cout<< food <<std::endl;
     std::string School = "Sukuna";
     std::cout<< School <<std::endl;
+    //to print AAROHAN ate Bhaat and went to Sukuna school we have to do:
+    std::cout<< name <<" ate "<< food <<" and went to "<<School <<" school" <<std::endl;
 
     return 0;
 }
