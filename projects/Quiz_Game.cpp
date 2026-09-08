@@ -30,6 +30,9 @@ int main(){
             std::cout << "Wrong! The correct answer is: " << answerKeys[i] << "\n";
         }
     }
+    std::cout << "------------------------\n";
+    std::cout << "Your final score is: " << score << "/" << size << "\n";
+    std::cout << "Thank you for playing the Quiz Game!\n";
 
     return 0;
 }
