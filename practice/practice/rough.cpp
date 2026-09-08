@@ -1,33 +1,29 @@
-// this is a file where I practice the codes so it can vary according to time or 
-// it simply means that it is a digital rough book for me
-#include<iostream>
-//in this program I can search up for an element for it's index value
-int searchArray(std::string array[], int size, std::string element);
-int main(){
-    std::string names[] = {"Arjit","Chamlagain", "Parisha", "Basnet"};
-    int size = sizeof(names)/sizeof(names[0]);
-    int index;
-    std::string myName;
-
-    std::cout << "Enter your name" << '\n';
-    std::getline(std::cin, myName);
-
-
-   index =  searchArray(names, size, myName);
- if(index != -1){
-    std::cout << myName << " is at index " << index;
-}
-else{
-     std::cout << myName << " is not an index"; 
-
+#include <iostream>
+void sort(int array[], int size);
+int main()
+{
+    int arr[] = {10, 1, 9, 2, 8, 3, 7, 4, 6, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    sort(arr, size);
+ for(int element : arr){
+    std::cout << element << ' ';
  }
-
     return 0;
 }
-int searchArray(std::string array[], int size, std::string element){
- for(int i = 0; i < size; i++){
- if( array[i] == element){
- return i;
- }}
-    return -1;
+void sort(int array[], int size)
+{
+
+    int temp;
+    for (int i = 0; i < size - 1; i++)
+    {
+        for (int j = 0; j < size - 1; j++)
+        {
+            if (array[j] > array[j + 1])
+            {
+                temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        }
+    }
 }
