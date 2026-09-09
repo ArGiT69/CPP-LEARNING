@@ -17,6 +17,18 @@ int main(){
         while(running){
             playerMove(space, player);
             drawBoard(space);
+            
+            if(checkWinner(space, player, computer)){
+                running = false;
+                break;
+            }
+            computeMove(space, computer);
+            drawBoard(space);
+
+            if(checkWinner(space, player, computer)){
+                running = false;
+                break;
+            }
         }
     
     return 0; 
@@ -47,9 +59,25 @@ do {
 while (!number > 0 || !number < 8);
 }
 void computeMove(char *space, char computer){
+ int number;
+ srand(time(0));
 
+ while(true){
+    number = rand() % 9;
+    if(space[number] == ' '){
+        space[number] = computer;
+        break;
+    }
+ }
 }
 bool checkWinner(char *space, char player, char computer){
+
+if(space[0] == space[1] && space[1] == space[2]){
+space[0] == player? std::cout<<"Player wins!"<<std::endl : std::cout<<"Computer wins!"<<std::endl;
+
+}
+
+
 return 0;
 }
 bool checkTie(char *space){
