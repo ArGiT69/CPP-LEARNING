@@ -24,12 +24,17 @@ int main(){
             }
             computeMove(space, computer);
             drawBoard(space);
-
+            
             if(checkWinner(space, player, computer)){
                 running = false;
                 break;
             }
+            else if(checkTie(space)){
+                running = false;
+                break;
+            }
         }
+        std::cout << "Game Over!" << std::endl;
     
     return 0; 
 }
@@ -104,5 +109,12 @@ else{
     return true;
 }
 bool checkTie(char *space){
-return 0;
+for(int i = 0; i <9; i++){
+    if(space[i]==' '){
+        return false;
+    }
+}
+std::cout<<"It's a tie!"<<std::endl;
+
+return true;
 }
