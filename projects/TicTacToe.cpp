@@ -1,11 +1,11 @@
 #include<iostream>
 #include<ctime>
 
-void drawBoard(char *spaces);
-void playerMove(char *spaces, char player);
-void computeMove(char *spaces, char computer);
-bool checkWinner(char *spaces, char player, char computer);
-bool checkTie(char *spaces);
+void drawBoard(char *space);
+void playerMove(char *space, char player);
+void computeMove(char *space, char computer);
+bool checkWinner(char *space, char player, char computer);
+bool checkTie(char *space);
 
 
 int main(){ 
@@ -14,30 +14,44 @@ int main(){
     char computer = 'O';
         bool running = true;
         drawBoard(space);
+        while(running){
+            playerMove(space, player);
+            drawBoard(space);
+        }
     
     return 0; 
 }
-void drawBoard(char *spaces){
+void drawBoard(char *space){
     std::cout << '\n';
     std::cout << "     |     |     " << std::endl;
-    std::cout << "  " << spaces[0] << "  |  " << spaces[1] << "  |  " << spaces[2] << "  " << std::endl;
-    std::cout << "____|_____|_____" << std::endl;
+    std::cout << "  " << space[0] << "  |  " << space[1] << "  |  " << space[2] << "  " << std::endl;
+    std::cout << "_____|_____|_____" << std::endl;
     std::cout << "     |     |     " << std::endl;
-    std::cout << "  " << spaces[3] << "  |  " << spaces[4] << "  |  " << spaces[5] << "  " << std::endl;
-    std::cout << "____|_____|_____" << std::endl;
+    std::cout << "  " << space[3] << "  |  " << space[4] << "  |  " << space[5] << "  " << std::endl;
+    std::cout << "_____|_____|_____" << std::endl;
     std::cout << "     |     |     " << std::endl;
-    std::cout << "  " << spaces[6] << "  |  " << spaces[7] << "  |  " << spaces[8] << "  " << std::endl;
+    std::cout << "  " << space[6] << "  |  " << space[7] << "  |  " << space[8] << "  " << std::endl;
     std::cout << '\n';
 }
-void playerMove(char *spaces, char player){
+void playerMove(char *space, char player){
+int number;
+do {
+    std::cout<<"Enter a spot to place a marker (1-9): ";
+    std::cin>>number;
+    number--;
+    if(space[number] == ' '){
+        space[number] = player;
+        break;
+    }
+}
+while (!number > 0 || !number < 8);
+}
+void computeMove(char *space, char computer){
 
 }
-void computeMove(char *spaces, char computer){
-
-}
-bool checkWinner(char *spaces, char player, char computer){
+bool checkWinner(char *space, char player, char computer){
 return 0;
 }
-bool checkTie(char *spaces){
+bool checkTie(char *space){
 return 0;
 }
