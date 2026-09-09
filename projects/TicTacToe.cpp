@@ -72,13 +72,36 @@ void computeMove(char *space, char computer){
 }
 bool checkWinner(char *space, char player, char computer){
 
-if(space[0] == space[1] && space[1] == space[2]){
-space[0] == player? std::cout<<"Player wins!"<<std::endl : std::cout<<"Computer wins!"<<std::endl;
-
+if((space[0] != ' ') && (space[0] == space[1]) && (space[1] == space[2])){
+    space[0] == player? std::cout<<"Player wins!"<<std::endl : std::cout<<"Computer wins!"<<std::endl;
 }
-
-
-return 0;
+else if((space[3] != ' ') && (space[3] == space[4]) && (space[4] == space[5])){
+    space[3] == player? std::cout<<"Player wins!"<<std::endl : std::cout<<"Computer wins!"<<std::endl;
+}
+else if((space[6] != ' ') && (space[6] == space[7]) && (space[7] == space[8])){
+    space[6] == player? std::cout<<"Player wins!"<<std::endl : std::cout<<"Computer wins!"<<std::endl;
+}
+else if((space[0] != ' ') && (space[0] == space[3]) && (space[3] == space[6])){
+    space[0] == player? std::cout<<"Player wins!"<<std::endl : std::cout<<"Computer wins!"<<std::endl;
+}
+else if((space[1] != ' ') && (space[1] == space[4]) && (space[4] == space[7])){
+    space[1] == player? std::cout<<"Player wins!"<<std::endl : std::cout<<"Computer wins!"<<std::endl;
+}
+else if((space[2] != ' ') && (space[2] == space[5]) && (space[5] == space[8])){
+    space[2] == player? std::cout<<"Player wins!"<<std::endl : std::cout<<"Computer wins!"<<std::endl;
+}
+else if((space[2] != ' ') && (space[2] == space[5]) && (space[5] == space[8])){
+    space[2] == player? std::cout<<"Player wins!"<<std::endl : std::cout<<"Computer wins!"<<std::endl;
+}
+else if((space[0] != ' ') && (space[0] == space[4]) && (space[4] == space[8])){
+    space[0] == player? std::cout<<"Player wins!"<<std::endl : std::cout<<"Computer wins!"<<std::endl;
+}
+else if((space[2] != ' ') && (space[2] == space[4]) && (space[4] == space[6])){
+    space[2] == player? std::cout<<"Player wins!"<<std::endl : std::cout<<"Computer wins!"<<std::endl;
+}
+else{
+    return false;}
+    return true;
 }
 bool checkTie(char *space){
 return 0;
