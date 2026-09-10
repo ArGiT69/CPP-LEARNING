@@ -2,7 +2,7 @@
 
 int main()
 {
-    char* pGrades = NULL;
+    char *pGrades = NULL;
     int size;
 
     std::cout << "How many grades to enter in? : ";
