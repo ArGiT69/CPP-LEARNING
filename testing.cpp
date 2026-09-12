@@ -5,7 +5,7 @@ int main(){
     /*
     This is
     a multi line comment
-    haha!
+    haha! 
     */
     std::cout<<"Hello world!" <<'\n';
     // for adding a new line, <<'\n' and <<std::endl both are suitable
