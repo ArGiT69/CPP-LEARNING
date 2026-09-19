@@ -9,6 +9,7 @@ class School{
         std::cout << "My school's name is : " << Name << '\n';
         std::cout << "My school's Address is : " << Address << '\n';
         std::cout << "My school was established in : " << Estd << " BS " <<'\n';
+        std::cout << '\n';
     }
     School(string name, string address, int estd){
         Name = name;
