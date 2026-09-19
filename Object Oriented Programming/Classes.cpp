@@ -1,18 +1,20 @@
-#include<iostream>
+#include <iostream>
 using std::string;
-class Employee{
-    public:
+class Employee
+{
+public:
     string Name;
     string Company;
-    int Age;   
-    void introduceYourself(){
+    int Age;
+    void introduceYourself()
+    {
         std::cout << "Name - " << Name << std::endl;
         std::cout << "Company - " << Company << std::endl;
         std::cout << "Age - " << Age << std::endl;
-    
     }
 };
-int main(){
+int main()
+{
     int number;
     Employee employee1;
     employee1.Name = "Parisha";
