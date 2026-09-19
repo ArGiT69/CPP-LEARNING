@@ -19,5 +19,12 @@ int main(){
     employee1.Company = "Arjit";
     employee1.Age = 16;
     employee1.introduceYourself();
+
+    Employee employee2;
+    employee2.Name = "Arjit";
+    employee2.Company = "Parisha";
+    employee2.Age = 16;
+    employee2.introduceYourself();
+
     return 0;
 }
