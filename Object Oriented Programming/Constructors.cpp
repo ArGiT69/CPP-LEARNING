@@ -21,7 +21,7 @@ public:
 };
 int main()
 {
-    int number;
+
     Employee employee1 = Employee("Parisha", "Arjit", 16);
     employee1.introduceYourself();
 
